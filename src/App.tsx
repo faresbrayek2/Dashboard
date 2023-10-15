@@ -12,12 +12,12 @@ const App = () => {
       <div className="flex flex-col md:flex-row">
         <DefaultSidebar />
         <div className="flex flex-col w-full">
-          <NavbarWithSearch />
           <DrawerWithNavigation />
+          <NavbarWithSearch />
+          <RouterProvider router={router} />
         </div>
       </div>
 
-      <RouterProvider router={router} />
       <SimpleFooter />
     </>
   );

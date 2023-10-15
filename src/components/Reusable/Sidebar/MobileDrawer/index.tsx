@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Drawer,
-  Button,
   Typography,
   IconButton,
   List,
@@ -10,6 +9,7 @@ import {
   ListItemSuffix,
   Chip,
 } from "@material-tailwind/react";
+import { Bars4Icon } from "@heroicons/react/24/solid";
 
 export function DrawerWithNavigation() {
   const [open, setOpen] = React.useState(false);
@@ -18,7 +18,9 @@ export function DrawerWithNavigation() {
 
   return (
     <div className="md:hidden">
-      <Button onClick={openDrawer}>Open Drawer</Button>
+      <div className="flex justify-end p-4">
+        <Bars4Icon width={30} onClick={openDrawer}></Bars4Icon>
+      </div>
       <Drawer open={open} onClose={closeDrawer}>
         <div className="mb-2 flex items-center justify-between p-4">
           <Typography variant="h5" color="blue-gray">
